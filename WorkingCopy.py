@@ -3,6 +3,9 @@
 
 # Appex script to copy a git file, folder, or repo from the Working Copy app
 
+# Slightly modified version based on:
+# https://github.com/cclauss/Pythonista-and-Working-Copy
+
 import appex, os, shutil, console
 
 from_wc = os.path.abspath(os.path.expanduser('~/Documents/'))
