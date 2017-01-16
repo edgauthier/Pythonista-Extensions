@@ -23,7 +23,7 @@ def main():
             os.makedirs(file_path)
         if os.path.isdir(srce_path):
             shutil.rmtree(dest_path, ignore_errors=True)
-            print(shutil.copytree(srce_path, dest_path))
+            print(shutil.copytree(srce_path, dest_path, ignore=shutil.ignore_patterns('.git')))
         else:
             print(shutil.copy2(srce_path, dest_path))
         print('{} was copied to {}'.format(file_name, file_path))
